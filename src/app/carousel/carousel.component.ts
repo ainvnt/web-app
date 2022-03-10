@@ -13,6 +13,7 @@ import {
   ElementRef,
   HostListener,
   Input,
+  OnInit,
   QueryList,
   ViewChild,
   ViewChildren,
@@ -20,6 +21,7 @@ import {
 
 import { CarouselItemDirective } from './carousel-item.directive';
 import { CarouselItemElementDirective } from './carousel-item-element.directive';
+import { Subscription, switchMap, timer } from 'rxjs';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -28,9 +30,10 @@ import { CarouselItemElementDirective } from './carousel-item-element.directive'
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent implements AfterViewInit {
+export class CarouselComponent implements OnInit, AfterViewInit {
   @ContentChildren(CarouselItemDirective)
   items!: QueryList<CarouselItemDirective>;
+  subscription!: Subscription;
 
   @ViewChildren(CarouselItemElementDirective, { read: ElementRef })
   private itemsElements!: QueryList<ElementRef>;
@@ -44,6 +47,12 @@ export class CarouselComponent implements AfterViewInit {
   carouselWrapperStyle = {};
 
   constructor(private builder: AnimationBuilder) { }
+
+  ngOnInit() {
+    setInterval(() => {
+      this.next();
+    },5000)
+  }
 
   private buildAnimation(offset: any) {
     return this.builder.build([
