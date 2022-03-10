@@ -7,12 +7,8 @@
 </div>
 
 <mat-toolbar class="secondToolbar" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
-  <div class="header">
-    <ng-container>
-      <ng-template #stickyMenu *ngTemplateOutlet="menu">
-      </ng-template>
-    </ng-container>
-  </div>
+  <ng-template #stickyMenu *ngTemplateOutlet="menu">
+  </ng-template>
 </mat-toolbar>
 
 <ng-template #menu>

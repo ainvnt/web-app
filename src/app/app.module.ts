@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { MaterialModule } from './material/material.module';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MaterialModule } from './material/material.module';
     HeaderComponent,
     FooterComponent,
     BodyComponent,
-    MenuComponent
+    MenuComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
