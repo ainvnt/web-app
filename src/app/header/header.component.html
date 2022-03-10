@@ -1,18 +1,33 @@
-<div class="header">
-  <a href="#default" class="logo"><img src="/assets/logo.jpg"></a>
-  <div class="header-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#contact">Contact</a>
-  </div>
+<app-menu></app-menu>
+<div>
+  <ng-container>
+    <ng-template #mainMenu *ngTemplateOutlet="menu;context:{cellvalue :2}">
+    </ng-template>
+  </ng-container>
 </div>
 
-<mat-toolbar class="secondToolbar"
-             [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
-             <div class="header">
-              <a href="#default" class="logo"><img src="/assets/logo.jpg"></a>
-              <div class="header-right">
-                <a class="active" href="#home">Home</a>
-                <a href="#contact">Contact</a>
-              </div>
-            </div>
+<mat-toolbar class="secondToolbar" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+  <div class="header">
+    <ng-container>
+      <ng-template #stickyMenu *ngTemplateOutlet="menu">
+      </ng-template>
+    </ng-container>
+  </div>
 </mat-toolbar>
+
+<ng-template #menu>
+  <mat-grid-list cols="12" rowHeight="1:1">
+    <mat-grid-tile>&nbsp;</mat-grid-tile>
+    <mat-grid-tile>&nbsp;</mat-grid-tile>
+    <mat-grid-tile>Home</mat-grid-tile>
+    <mat-grid-tile>About Us</mat-grid-tile>
+    <mat-grid-tile>Solutions</mat-grid-tile>
+    <mat-grid-tile>Services</mat-grid-tile>
+    <mat-grid-tile>Expertise</mat-grid-tile>
+    <mat-grid-tile>Innovations</mat-grid-tile>
+    <mat-grid-tile>Our Technology</mat-grid-tile>
+    <mat-grid-tile>Careers</mat-grid-tile>
+    <mat-grid-tile>Contact</mat-grid-tile>
+    <mat-grid-tile>&nbsp;</mat-grid-tile>
+  </mat-grid-list>
+</ng-template>

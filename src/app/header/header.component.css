@@ -2,14 +2,21 @@
   .header {
     overflow: hidden;
     background-color: #f1f1f1;
-    padding: 20px 10px;
+    padding: 18px 9px;
   }
+
+  .contact-header {
+    background-color: #f1f1f1;
+    overflow: hidden;
+    padding: 4px 2px;
+  }
+  
   
   .header a {
     float: left;
     color: black;
     text-align: center;
-    padding: 12px;
+    padding: 2px;
     text-decoration: none;
     font-size: 18px; 
     line-height: 25px;
@@ -53,6 +60,7 @@
     top: 0;
     height: 0;
     opacity: 0;
+    width: 100%;
     transition: opacity .25s ease-out, height .15s ease;
     cursor: default;
     user-select: none;

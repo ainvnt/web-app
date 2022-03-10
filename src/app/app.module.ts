@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { MenuComponent } from './header/menu/menu.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MenuComponent } from './header/menu/menu.component';
     BrowserModule,
     BrowserAnimationsModule, 
     HttpClientModule,
+    MaterialModule,
     HttpClientXsrfModule.withOptions({
       cookieName: 'XSRF-TOKEN',
       headerName: 'X-CSRF-TOKEN'
