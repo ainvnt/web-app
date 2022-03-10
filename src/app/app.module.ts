@@ -13,6 +13,7 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemDirective } from './carousel/carousel-item.directive';
 import { CarouselItemElementDirective } from './carousel/carousel-item-element.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CarouselItemElementDirective } from './carousel/carousel-item-element.d
     BrowserAnimationsModule, 
     HttpClientModule,
     MaterialModule,
+    FormsModule,
     HttpClientXsrfModule.withOptions({
       cookieName: 'XSRF-TOKEN',
       headerName: 'X-CSRF-TOKEN'
