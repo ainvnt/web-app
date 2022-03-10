@@ -1,3 +1,11 @@
+<carousel>
+    <ng-container *ngFor="let item of items">
+      <ng-container *carouselItem>
+        <div class="item">{{ item.title }}</div>
+      </ng-container>
+    </ng-container>
+  </carousel>
+
 <div style="padding-left:20px">
     <h1>Responsive Header</h1>
     <p>Resize the browser window to see the effect.</p>

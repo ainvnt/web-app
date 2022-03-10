@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule, HttpClientXsrfModule} from "@angular/common/http";
 
@@ -10,6 +10,9 @@ import { BodyComponent } from './body/body.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { MaterialModule } from './material/material.module';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselItemDirective } from './carousel/carousel-item.directive';
+import { CarouselItemElementDirective } from './carousel/carousel-item-element.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     FooterComponent,
     BodyComponent,
     MenuComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    CarouselComponent,
+    CarouselItemDirective, 
+    CarouselItemElementDirective
   ],
   imports: [
     BrowserModule,
@@ -31,6 +37,7 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     })
   ],
   providers: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
