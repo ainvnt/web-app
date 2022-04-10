@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~@angular/material/prebuilt-themes/purple-green.css";
+/* @import "~@angular/material/prebuilt-themes/purple-green.css"; */
 
 * {
     box-sizing: border-box;
@@ -12,7 +12,7 @@ html, body {
 
 body { 
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    font: 400 15px / 22px Roboto, sans-serif !important;
 }
 
 .item {
@@ -25,3 +25,79 @@ body {
     line-height: 300px;
     text-align: center;
   }
+
+  .row{
+      margin: 0px !important;
+  }
+  
+
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: #2196f3;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 4px 4px 4px 4px;
+    padding: 0.75em 0.75em 0 0.75em;
+    border: 1px solid #e3f2fd;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: rgb(227 242 253 / 15%) !important;
+}
+
+.mat-form-field-underline {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    transform: scale3d(1, 1.0001, 1);
+    opacity: 0;
+}
+
+.mat-form-field:last-child .mat-form-field-wrapper {
+    padding: 0px;
+}
+
+.pr-0 {
+    padding-right: 0px;
+}
+
+.pl-0 {
+    padding-left: 0px;
+}
+
+.banner-img {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-img img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.banner-img:before {
+    content: '';
+    position: absolute;
+    background: #5990b8;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.banner label {
+    position: absolute;
+    top: 30%;
+    transform: translate(30%, 130%);
+    font-size: 48px;
+    font-weight: 400;
+    z-index: 10;
+    color: white;
+}
+
+label.info-label {
+    align-items: center;
+    display: flex;
+}

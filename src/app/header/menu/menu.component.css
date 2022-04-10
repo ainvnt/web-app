@@ -1,0 +1,22 @@
+.row.header-top {
+    padding: 5px 60px;
+    background: #42a5f5;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.row.header-top label.info-label mat-icon {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+.row.header-top mat-icon {
+    vertical-align: bottom;
+    font-size: 18px;
+    width: 18px;
+    margin: auto;
+    margin-left: 10px;
+    height: auto;
+}

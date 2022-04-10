@@ -14,6 +14,12 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemDirective } from './carousel/carousel-item.directive';
 import { CarouselItemElementDirective } from './carousel/carousel-item-element.directive';
 import { FormsModule } from '@angular/forms';
+import { AboutusComponent } from './body/aboutus/aboutus.component';
+import { AppRoutingModule } from './app-routing-module';
+import { HomeComponent } from './body/home/home.component';
+import { ContactusComponent } from './body/contactus/contactus.component';
+import { ServicesComponent } from './body/services/services.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,7 @@ import { FormsModule } from '@angular/forms';
     ScrollToTopComponent,
     CarouselComponent,
     CarouselItemDirective, 
-    CarouselItemElementDirective
+    CarouselItemElementDirective, AboutusComponent, HomeComponent, ContactusComponent, ServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientXsrfModule.withOptions({
       cookieName: 'XSRF-TOKEN',
       headerName: 'X-CSRF-TOKEN'
-    })
+    }),
+    AppRoutingModule
   ],
   providers: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],

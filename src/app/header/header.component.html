@@ -1,5 +1,5 @@
 <app-menu></app-menu>
-<div>
+<div class="header-main">
   <ng-container>
     <ng-template #mainMenu *ngTemplateOutlet="menu;context:{cellvalue :2}">
     </ng-template>
@@ -12,18 +12,51 @@
 </mat-toolbar>
 
 <ng-template #menu>
-  <mat-grid-list cols="12" rowHeight="1:1">
-    <mat-grid-tile>&nbsp;</mat-grid-tile>
-    <mat-grid-tile>&nbsp;</mat-grid-tile>
-    <mat-grid-tile>Home</mat-grid-tile>
-    <mat-grid-tile>About Us</mat-grid-tile>
-    <mat-grid-tile>Solutions</mat-grid-tile>
-    <mat-grid-tile>Services</mat-grid-tile>
-    <mat-grid-tile>Expertise</mat-grid-tile>
-    <mat-grid-tile>Innovations</mat-grid-tile>
-    <mat-grid-tile>Our Technology</mat-grid-tile>
-    <mat-grid-tile>Careers</mat-grid-tile>
-    <mat-grid-tile>Contact</mat-grid-tile>
-    <mat-grid-tile>&nbsp;</mat-grid-tile>
-  </mat-grid-list>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand" routerLink='home'><img src="../../assets/logo.png">Ainvnt</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerNav" aria-controls="headerNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-auto" id="headerNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink='home'>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='aboutus'>About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void">Solutions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='services'>Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void">Expertise</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void">Innovations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void">Our Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='contactus'>Contact Us</a>
+          </li>
+          <li class="nav-item dropdown" style="display: none;">
+            <a class="nav-link dropdown-toggle"href="javascript:void" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="javascript:void">Action</a></li>
+              <li><a class="dropdown-item" href="javascript:void">Another action</a></li>
+              <li><a class="dropdown-item" href="javascript:void">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </ng-template>
+<router-outlet></router-outlet>
