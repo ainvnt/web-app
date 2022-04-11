@@ -6,8 +6,8 @@ import { HomeComponent } from './body/home/home.component';
 import { ServicesComponent } from './body/services/services.component';
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: 'aboutus', component: AboutusComponent },
+    { path: 'home', component: HomeComponent, data : {title: 'Home'} },
+    { path: 'aboutus', component: AboutusComponent, data : {title: 'About Us'} },
     { path: 'services', component: ServicesComponent },
     { path: 'contactus', component: ContactusComponent },
     { path: '',   redirectTo: '/home', pathMatch: 'full' },
