@@ -15,6 +15,11 @@ body {
     font: 400 15px / 22px Roboto, sans-serif !important;
 }
 
+.linkActive { 
+    border: solid;
+    color: red;
+}
+
 .item {
     padding: 0;
     width: 100vw;

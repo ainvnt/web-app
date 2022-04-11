@@ -10,6 +10,8 @@ const routes: Routes = [
     { path: 'aboutus', component: AboutusComponent },
     { path: 'services', component: ServicesComponent },
     { path: 'contactus', component: ContactusComponent },
+    { path: '',   redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', component: HomeComponent }
 ]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
