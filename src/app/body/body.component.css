@@ -157,6 +157,7 @@ p.sec-main-content {
     box-shadow: 0px 2px 10px rgb(0 0 0 / 20%);
     cursor: default;
   }
+  
   .card-main:before {
     content: "";
     position: absolute;
@@ -202,6 +203,7 @@ p.sec-main-content {
     background: #42a5f5;
     transition: background 0.15s ease-out;
 }
+
 label.sec-sub-title.center-title {
     text-align: center;
     width: 100%;

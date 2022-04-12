@@ -10,9 +10,6 @@ import { BodyComponent } from './body/body.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { MaterialModule } from './material/material.module';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
-import { CarouselComponent } from './carousel/carousel.component';
-import { CarouselItemDirective } from './carousel/carousel-item.directive';
-import { CarouselItemElementDirective } from './carousel/carousel-item-element.directive';
 import { FormsModule } from '@angular/forms';
 import { AboutusComponent } from './body/aboutus/aboutus.component';
 import { AppRoutingModule } from './app-routing-module';
@@ -29,9 +26,7 @@ import { ServicesComponent } from './body/services/services.component';
     BodyComponent,
     MenuComponent,
     ScrollToTopComponent,
-    CarouselComponent,
-    CarouselItemDirective, 
-    CarouselItemElementDirective, AboutusComponent, HomeComponent, ContactusComponent, ServicesComponent
+    AboutusComponent, HomeComponent, ContactusComponent, ServicesComponent
   ],
   imports: [
     BrowserModule,
