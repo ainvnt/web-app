@@ -24,10 +24,20 @@
             <a class="nav-link" [routerLinkActive]="['linkActive']" routerLink='home'>Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"[routerLinkActive]="['linkActive']"  routerLink='aboutus'>About Us</a>
+            <a class="nav-link" [routerLinkActive]="['linkActive']"  routerLink='aboutus'>About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLinkActive]="['linkActive']" routerLink='services'>Services</a>
+            <a class="nav-link" [routerLinkActive]="['linkActive']" routerLink='services'>
+              <div mat-button [matMenuTriggerFor]="menu">Services</div>
+            </a>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Application Services</button>
+              <button mat-menu-item>Software Development</button>
+              <button mat-menu-item>Project Management</button>
+              <button mat-menu-item>Cloud Computing</button>
+              <button mat-menu-item>IT Consulting</button>
+              <button mat-menu-item>Devops Automation</button>
+            </mat-menu>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLinkActive]="['linkActive']" href="javascript:void">Expertise</a>
