@@ -90,9 +90,3 @@
 .contactus-form .btn.btn-primary:hover {
     background: #2196f3 !important;
 }
-
-.gmap-styles{
-    width: 100%;
-    position: relative;
-    bottom: -5px;
-}

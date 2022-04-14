@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { HomeComponent } from './body/home/home.component';
 import { ContactusComponent } from './body/contactus/contactus.component';
 import { ServicesComponent } from './body/services/services.component';
+import { LocationComponent } from './body/contactus/location/location.component';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { ServicesComponent } from './body/services/services.component';
     BodyComponent,
     MenuComponent,
     ScrollToTopComponent,
-    AboutusComponent, HomeComponent, ContactusComponent, ServicesComponent
+    AboutusComponent, HomeComponent, ContactusComponent, ServicesComponent, LocationComponent
   ],
   imports: [
     BrowserModule,

@@ -12,18 +12,20 @@ export class ScrollToTopComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private document: Document) {}
   @HostListener("window:scroll", [])
   onWindowScroll() {
-      if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
+      if (window.pageYOffset > 500) {
           this.windowScrolled = true;
       } 
-     else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+     else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 20) {
           this.windowScrolled = false;
       }
   }
-  
-  scrollToTop() {
-    window.scrollTo(0, 0);
-  }
 
+  scrollToTop() {
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentScroll > 0) {
+        window.scrollTo(0, currentScroll - (currentScroll / 10));
+    }
+  }
   ngOnInit() {}
 }
 
