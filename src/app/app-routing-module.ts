@@ -8,8 +8,8 @@ import { ServicesComponent } from './body/services/services.component';
 const routes: Routes = [
     { path: 'home', component: HomeComponent, data : {title: 'Home'} },
     { path: 'aboutus', component: AboutusComponent, data : {title: 'About Us'} },
-    { path: 'services', component: ServicesComponent },
-    { path: 'contactus', component: ContactusComponent },
+    { path: 'services', component: ServicesComponent, data: {title: 'Services'} },
+    { path: 'contactus', component: ContactusComponent, data: {title: 'Contact Us'} },
     { path: '',   redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: HomeComponent }
 ]; // sets up routes constant where you define your routes

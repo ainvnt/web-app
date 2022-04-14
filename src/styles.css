@@ -16,8 +16,8 @@ body {
 }
 
 .linkActive { 
-    border: solid;
-    color: red;
+    /* border: solid; */
+    color: #2196f3 !important;
 }
 
 .item {
